@@ -41,12 +41,13 @@ public class EarthquakeAdapter extends RecyclerView.Adapter<EarthquakeAdapter.Vi
         Earthquake items = listItems.get(position);
         viewHolder.textViewMag.setText(items.getMagnitude().toString());
         viewHolder.textViewLoc.setText(items.getLocation());
-        viewHolder.textViewTime.setText(items.getTime());
+        viewHolder.textViewTime.setText(items.getTime().toString());
 
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return listItems.size();
     }
 
@@ -57,6 +58,7 @@ public class EarthquakeAdapter extends RecyclerView.Adapter<EarthquakeAdapter.Vi
         TextView textViewMag;
         TextView textViewLoc;
         TextView textViewTime;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
